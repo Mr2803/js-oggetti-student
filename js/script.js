@@ -47,7 +47,16 @@ var studenti = [
 ]
 
 
-    for(var firstStud in studenti[0]){
+for (var i = 0; i < studenti.length; i++) {
+    
+    console.log(studenti[i].nome + " " +  studenti[i].cognome);
+
+
+    
+}
+
+
+/*     for(var firstStud in studenti[0]){
         console.log("lo studente è " + firstStud + ": " + studenti[0][firstStud]);
     }
     for(var secStud in studenti[1]){
@@ -56,7 +65,7 @@ var studenti = [
     for(var thirdStud in studenti[2]){
 
         console.log("lo studente è " + thirdStud + ":" + studenti[2][thirdStud]);
-    }
+    } */
 
 //FINITA SECONDA PARTE DELL'ESERCIZIO
 
