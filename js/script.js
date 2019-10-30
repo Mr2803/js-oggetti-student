@@ -24,54 +24,54 @@ console.log("FINITA PRIMA PARTE DELL'ESERCIZIO")
 
 /* Creare un array di oggetti di studenti.
 Ciclare su tutti gli studenti e stampare per ognuno nome e cognome */
+var studenti = []
 
-var studenti = [
-    { 
-        "nome" : "fabio",
-        "cognome": "mancini",
-        "eta": 30
+var studente1 = {};
+var studente2 = {};
+var studente3 = {};
+var studente4 = {};
+var studente5 = {};
 
-    },
-    {
-        "nome": "marco",
-        "cognome": "salvi",
-        "eta": 26
+studenti.push(studente1)
+studenti.push(studente2)
+studenti.push(studente3)
+studenti.push(studente4)
+studenti.push(studente5)
 
-    },
-    {
-        "nome": "elena",
-        "cognome": "fierro",
-        "eta": 25
+studente1.nome = "Marco";
+studente2.nome = "Fabio";
+studente3.nome = "Elena";
+studente4.nome = "Chiara";
+studente5.nome = "Simone";
 
-    }
-]
+studente1.cognome = "Rispoli";
+studente2.cognome = "Mancini";
+studente3.cognome = "Fierro";
+studente4.cognome = "Passaro";
+studente5.cognome = "Icardi";
+
+studente1.eta = "28";
+studente2.eta = "30";
+studente3.eta = "28";
+studente4.eta = "35";
+studente5.eta = "35";
+
+
 
 
 for (var i = 0; i < studenti.length; i++) {
     
     console.log(studenti[i].nome + " " +  studenti[i].cognome);
-
-
-    
 }
 
-
-/*     for(var firstStud in studenti[0]){
-        console.log("lo studente è " + firstStud + ": " + studenti[0][firstStud]);
-    }
-    for(var secStud in studenti[1]){
-        console.log("lo studente è " + secStud + ": " + studenti[1][secStud]);
-    }
-    for(var thirdStud in studenti[2]){
-
-        console.log("lo studente è " + thirdStud + ":" + studenti[2][thirdStud]);
-    } */
 
 //FINITA SECONDA PARTE DELL'ESERCIZIO
 
 /*- Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età. */ 
 
 var newStudent={}
+
+studenti.push(newStudent);
 
 var nomeInput = prompt("inserisci il nome dell'utente");
 var cognomeInput = prompt("inserisci il cognome dell'utente");
@@ -82,4 +82,10 @@ newStudent.cognome= cognomeInput;
 newStudent.eta= etaInput;
 
 console.log("il nuovo oggetto è:" , newStudent);
+console.log("i nuovi studenti sono : ")
+
+for (var j = 0; j < studenti.length; j++) {
+    
+    console.log(studenti[j].nome + " " + studenti[j].cognome);
+}
 
