@@ -47,6 +47,7 @@ studenti.push(studente4)
 studenti.push(studente5)
 
 
+
 //imposto il valore degli oggetti
 studente1.nome = "Marco";
 studente2.nome = "Fabio";
@@ -86,12 +87,17 @@ var newStudent={}
 
 //pusho l'oggetto all'interno del precedente array
 studenti.push(newStudent);
-
+console.log(studenti)
 
 //riempo l'oggetto con dei prompt 
 var nomeInput = prompt("inserisci il nome dell'utente");
 var cognomeInput = prompt("inserisci il cognome dell'utente");
+
+while(isNaN(etaInput)){
+
 var etaInput = parseInt(prompt("inserisci l'età dell'utente"));
+
+}
 
 newStudent.nome= nomeInput;
 newStudent.cognome= cognomeInput;
