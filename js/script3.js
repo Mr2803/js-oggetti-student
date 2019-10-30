@@ -23,61 +23,60 @@ for (var dati in student) {
     console.log("lo studente è " + dati + ": " + student[dati]);
 }
 
+console.log("FINITA PRIMA PARTE DELL'ESERCIZIO")
 console.log("\r\n")
 
 /* Creare un array di oggetti di studenti.
 Ciclare su tutti gli studenti e stampare per ognuno nome e cognome */
 
 //creo un array vuoto che riempirò con gli oggetti creati successivamente
-var studenti = []
+var studenti = [
+    {
+        "nome": "marco",
+        "cognome": "rispoli",
+        "eta": 28
+
+    },
+    {
+        "nome": "fabio",
+        "cognome": "mancini",
+        "eta": 30
+
+    },
+    {
+        "nome": "elena",
+        "cognome": "fierro",
+        "eta": 28
+
+    },
+    {
+        "nome": "chiara",
+        "cognome": "passaro",
+        "eta": 35
+
+    },
+    {
+        "nome": "simone",
+        "cognome": "icardi",
+        "eta": 36
+
+    }
+];
 
 
-//creo oggetti vuoti che pusherò all'interno dell'array studenti
-var studente1 = {};
-var studente2 = {};
-var studente3 = {};
-var studente4 = {};
-var studente5 = {};
 
-//pusho gli oggetti all'interno dell'array studenti
-studenti.push(studente1)
-studenti.push(studente2)
-studenti.push(studente3)
-studenti.push(studente4)
-studenti.push(studente5)
-
-
-
-//imposto le proprietà degli oggetti
-studente1.nome = "Marco";
-studente2.nome = "Fabio";
-studente3.nome = "Elena";
-studente4.nome = "Chiara";
-studente5.nome = "Simone";
-
-studente1.cognome = "Rispoli";
-studente2.cognome = "Mancini";
-studente3.cognome = "Fierro";
-studente4.cognome = "Passaro";
-studente5.cognome = "Icardi";
-
-studente1.eta = 28;
-studente2.eta = 30;
-studente3.eta = 28;
-studente4.eta = 35;
-studente5.eta = 35;
 
 
 
 //faccio un ciclo for per la lunghezza del mio array per stampare i dati degli studenti ( solo nome e cognome)
-console.log("gli attuali alunni sono : ")
 for (var i = 0; i < studenti.length; i++) {
 
     console.log(studenti[i].nome + " " + studenti[i].cognome);
 }
-console.log("\r\n")
 
-//FINITA SECONDA PARTE DELL'ESERCIZIO
+
+console.log("FINITA SECONDA PARTE DELL'ESERCIZIO")
+console.log("\r\n")
 
 /*- Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età. */
 
@@ -90,9 +89,17 @@ var newStudent = {}
 studenti.push(newStudent);
 console.log(studenti)
 
-newStudent.nome = whoIsName();
-newStudent.cognome = whoIsSurname();
-newStudent.eta = whoIsEta();
+//riempo l'oggetto con dei prompt 
+var nomeInput = prompt("inserisci il nome dell'utente");
+var cognomeInput = prompt("inserisci il cognome dell'utente");
+
+while (isNaN(etaInput)) {
+    var etaInput = parseInt(prompt("inserisci l'età dell'utente"));
+}
+
+newStudent.nome = nomeInput;
+newStudent.cognome = cognomeInput;
+newStudent.eta = etaInput;
 
 console.log("il nuovo oggetto è:", newStudent);
 console.log("i nuovi studenti sono : ")
@@ -103,47 +110,3 @@ for (var j = 0; j < studenti.length; j++) {
 
     console.log(studenti[j].nome + " " + studenti[j].cognome);
 }
-
-
-//blocco funzioni
-function whoIsName(){
-    var nome = "";
-    while (!isNaN(nome)){
-        nome = prompt("inserisci il nome dell'utente");
-        if (!isNaN(nome)) {
-            alert("wow il tuo nome è un numero")
-        }
-    }
-    
-    return nome;
-}
-
-function whoIsSurname(){
-    var cognome = "";
-    while (!isNaN(cognome)){
-        cognome = prompt("inserisci il cognome dell'utente");
-        if (!isNaN(cognome)){
-            alert("wow il tuo cognome è un numero")
-        }
-    }
-    
-    return cognome;
-}
-
-
-function whoIsEta(){
-
-    var eta;
-    
-    while (isNaN(eta)) {
-        eta = parseInt(prompt("inserisci la tua età"));
-        if (isNaN(eta)) {
-            alert("wow la tua età è una parola")
-        }
-    }
-  
-
- return eta;
-}
-
-//
