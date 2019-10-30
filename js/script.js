@@ -20,6 +20,8 @@ for(var dati in student){
     console.log("lo studente è " + dati + ": " + student[dati]);
 }
 
+console.log("FINITA PRIMA PARTE DELL'ESERCIZIO")
+
 /* Creare un array di oggetti di studenti.
 Ciclare su tutti gli studenti e stampare per ognuno nome e cognome */
 
@@ -45,13 +47,30 @@ var studenti = [
 ]
 
 
-    for(var primoStudente in studenti[0]){
-        console.log("lo studente è " + primoStudente + ": " + studenti[0][primoStudente]);
+    for(var firstStud in studenti[0]){
+        console.log("lo studente è " + firstStud + ": " + studenti[0][firstStud]);
     }
-    for(var primoStudente in studenti[1]){
-        console.log("lo studente è " + primoStudente + ": " + studenti[1][primoStudente]);
+    for(var secStud in studenti[1]){
+        console.log("lo studente è " + secStud + ": " + studenti[1][secStud]);
     }
-    for(var primoStudente in studenti[2]){
+    for(var thirdStud in studenti[2]){
 
-        console.log("lo studente è " + primoStudente + ":" + studenti[2][primoStudente]);
+        console.log("lo studente è " + thirdStud + ":" + studenti[2][thirdStud]);
     }
+
+//FINITA SECONDA PARTE DELL'ESERCIZIO
+
+/*- Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età. */ 
+
+var newStudent={}
+
+var nomeInput = prompt("inserisci il nome dell'utente");
+var cognomeInput = prompt("inserisci il cognome dell'utente");
+var etaInput = prompt("inserisci l'età dell'utente");
+
+newStudent.nome= nomeInput;
+newStudent.cognome= cognomeInput;
+newStudent.eta= etaInput;
+
+console.log("il nuovo oggetto è:" , newStudent);
+
