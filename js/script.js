@@ -60,11 +60,11 @@ studente3.cognome = "Fierro";
 studente4.cognome = "Passaro";
 studente5.cognome = "Icardi";
 
-studente1.eta = "28";
-studente2.eta = "30";
-studente3.eta = "28";
-studente4.eta = "35";
-studente5.eta = "35";
+studente1.eta = 28;
+studente2.eta = 30;
+studente3.eta = 28;
+studente4.eta = 35;
+studente5.eta = 35;
 
 
 
@@ -91,7 +91,7 @@ studenti.push(newStudent);
 //riempo l'oggetto con dei prompt 
 var nomeInput = prompt("inserisci il nome dell'utente");
 var cognomeInput = prompt("inserisci il cognome dell'utente");
-var etaInput = prompt("inserisci l'età dell'utente");
+var etaInput = parseInt(prompt("inserisci l'età dell'utente"));
 
 newStudent.nome= nomeInput;
 newStudent.cognome= cognomeInput;
@@ -107,3 +107,6 @@ for (var j = 0; j < studenti.length; j++) {
     console.log(studenti[j].nome + " " + studenti[j].cognome);
 }
 
+
+
+//
