@@ -111,7 +111,7 @@ for (var j = 0; j < studenti.length; j++) {
 
 
 //blocco funzioni
-function whoIsName(nome){
+function whoIsName(){
     var nome = "";
     while (!isNaN(nome)){
         nome = prompt("inserisci il nome dell'utente");
@@ -122,7 +122,8 @@ function whoIsName(nome){
     
     return nome;
 }
-function whoIsSurname(cognome){
+
+function whoIsSurname(){
     var cognome = "";
     while (!isNaN(cognome)){
         cognome = prompt("inserisci il cognome dell'utente");
@@ -135,7 +136,7 @@ function whoIsSurname(cognome){
 }
 
 
-function whoIsEta(eta){
+function whoIsEta(){
 
     var eta;
     
